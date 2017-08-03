@@ -10,13 +10,13 @@
 	$("#button1").on("click", function() {
 		event.preventDefault();
 
-	$(".drinksTable").html("");
+	$("#drinksTable").html("");
 
 	var cocktail = $("#cocktail-input").val().trim();
 	var data = $("#cocktail-input").val().trim();
 	
 	if (!$.trim(data)){   
-    	$('.drinksTable').html("Must Choose a Cocktail!!!")
+    	$('#drinksTable').html("Please choose a cocktail!!")
 	} else {   
     
 	$("#cocktail-input").val('');
@@ -55,7 +55,7 @@
 				console.log(arrayOfIngredients.join(','));
 
 			var Row = "<tr><td>" + name +"</td> <td>" +arrayOfIngredients.join(', ') +"</td><td>"+instructions+"</td></tr>"
-			$('.drinksTable').append(Row);
+			$('#drinksTable').append(Row);
 			
 		})
       });
@@ -66,13 +66,13 @@ $("#cocktail-input").on('keyup', function (e) {
     if (e.keyCode == 13) {
         	event.preventDefault();
 
-	$(".drinksTable").html("");
+	$("#drinksTable").html("");
 
 	var cocktail = $("#cocktail-input").val().trim();
 	var data = $("#cocktail-input").val().trim();
 	
 	if (!$.trim(data)){   
-    	$('.drinksTable').html("Must Choose a Cocktail!!!")
+    	$('#drinksTable').html("Please input a cocktail!")
 	} else {   
     
 	$("#cocktail-input").val('');
@@ -111,7 +111,7 @@ $("#cocktail-input").on('keyup', function (e) {
 				console.log(arrayOfIngredients.join(','));
 
 			var Row = "<tr><td>" + name +"</td> <td>" +arrayOfIngredients.join(', ') +"</td><td>"+instructions+"</td></tr>"
-			$('.drinksTable').append(Row);
+			$('#drinksTable').append(Row);
 			
 		})
 	  });
@@ -124,7 +124,7 @@ $("#cocktail-input").on('keyup', function (e) {
 
     $("#button3").on("click", function() {
 
-    $(".drinksTable").html("");
+    $("#drinksTable").html("");
 
 	var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 	console.log(queryURL)
@@ -155,8 +155,8 @@ $("#cocktail-input").on('keyup', function (e) {
 				})
 				console.log(arrayOfIngredients.join(','));
 
-			var Row = "<tr><td><p>Drink: " + name +"</td><td>Ingredients: " +arrayOfIngredients.join(', ') +"</td><br></br><td>Instructions: "+instructions+"</td></tr>"
-			$('.drinksTable').append(Row);
+			var Row = "<tr><td><p>" + name +"</td><td>" +arrayOfIngredients.join(', ') +"</td><br></br><td>"+instructions+"</td></tr>"
+			$('#drinksTable').append(Row);
 		})
       });
     });

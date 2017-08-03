@@ -1,5 +1,6 @@
     body {
         background-color: gray;
+        font-family: 'Julius Sans One', sans-serif;
     }
 
     th {
@@ -9,7 +10,10 @@
     #map-canvas {
               width: 200px;
           }
-    
+ 
+    place {
+        color: #555;
+    }     
     #title {
         background-color: gray; 
         color: white;
@@ -25,7 +29,9 @@
           background: url('../images/drinkinggif.gif') 50% 50% no-repeat;
           background-color: gray;
        }
-
+       #cocktail-input {
+           color:#555;
+       }
     .jumbotron {
         background-image: url("../images/bars.jpg");
         background-position: 50% 65%; 
@@ -41,7 +47,7 @@
     }
 
     .navbar {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         border-radius: 0;
     }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */

@@ -19,8 +19,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.3/css/bootstrap-select.min.css">
@@ -30,8 +32,6 @@
 </head>
 
 <body onload="initGeolocation();">
-
-<div class="container">
 
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -52,7 +52,7 @@
             </div>
         </div>
     </nav>
-
+<div class="container-fluid">
     <!-- Header -->
     <div class="jumbotron">
         <div class="container" id="title">
@@ -62,13 +62,14 @@
     </div>
 
     <!-- Drink Search -->
+    <div class="container">
     <div class="panel panel-default" style="background-color: #555; color: #eee">
         <div class="panel-heading" style="background-color: #444; color: #eee">
             <h3 class="panel-title">Drink Search</h3>
         </div>
         <div class="panel-body">
     
-    <div class="container-fluid text-left">
+    <div class="container text-left">
         <div class="row">
             <div class="col-md-2 sidenav">
                <form class="form-group" onSubmit="return false;">
@@ -83,28 +84,36 @@
                     <label for="ingredients">Can't Decide?</label>
                     <button type="button" class="btn btn-warning" id="button3">Random</button>
                 </form>
-            
-            <br><br>
-
-        </div>
-
-    <!-- Drinks Div -->
-            <div class="col-md-10 text-left">
-                <div id="drink"></div> 
-                    <table class="drinksTable">
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                    </table>
             </div>
-        </div>
+            <div class="col-md-2"></div>
+    <!-- Drinks Div -->
+            <div class="col-md-6 text-left">
+                    <table class="table">
+                       <thead>
+                        <tr>
+                            <th>Drink</th>
+                            <th>Ingredients</th>
+                            <th>Instructions</th>    
+                        </tr>
+                        </thead>
+                    <tbody id="drinksTable">
+                           <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>    
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                 </div>
+             </div>
         </div>
     </div>
     </div>
-    <!-- Map -->
 
+    <!-- Map -->
+    
+<div id="map-box" class="container">   
     <div class="panel panel-default" style="background-color: #555; color: #eee">
         <div class="panel-heading" style="background-color: #444; color: #eee">
             <h3 class="panel-title">Find your local ABC/Grocery Store...</h3>
@@ -112,33 +121,36 @@
         <div class="panel-body">
     
     <!-- Map -->
-            <div class="col-md-9 text-left" id="map-div">
+    <div class="row">
+            <div class="col-md-8 text-left" id="map-div">
                 <div id="map_canvas" style="height:400px; width:100%;"></div>
                 <div class="loader"></div>
             </div>
-    
+    <div class="col-md-1"></div>
     <!-- Maps Sidebar -->
-            <div class="container">
+            <div class="container" class="col-md-3">
                 <div>
                     <h1>Mixer Supplies Stores!</h1>
                 <div class="searchbox">
                     <h3>Bonus: Click Here to Find Somewhere to Drink</h3>
                 </div><br>
-                <button class="btn btn-default btn-lg" id="searchbtn">Supplies</button> <button class="btn btn-default btn-lg" id="refresh">Clear Map</button>
+                <button class="btn btn-default btn-lg" id="searchbtn">Supplies</button> 
+                <button class="btn btn-default btn-lg" id="refresh">Clear Map</button>
             </div>
     </div>
         
         </div>
     </div>
     </div>
-    </div>
+</div>
+</div>
     <!-- Footer -->
     <footer class="container-fluid text-center">
         <p> © Mixology Inc.
         </p>
     </footer>
 
-</div>
+
     <script type="text/javascript" src="assets/javascript/absolut.js"></script>
     <script type="text/javascript" src="assets/javascript/googlemaps.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
