@@ -1,16 +1,27 @@
-    body {
+body {
         background-color: gray;
         font-family: 'Julius Sans One', sans-serif;
     }
 
-    th {
+a {
+color: white;
+    }
+th {
         width: 200px;
     }
 
-    #map-canvas {
+#map-canvas {
               width: 200px;
           }
- 
+         
+
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid white;
+  outline: none;
+  color: #555;
+  background-color: white;
+}      
     place {
         color: #555;
     }     
@@ -29,41 +40,45 @@
           background: url('../images/drinkinggif.gif') 50% 50% no-repeat;
           background-color: gray;
        }
-       #cocktail-input {
+#cocktail-input {
            color:#555;
        }
-    .jumbotron {
+.jumbotron {
         background-image: url("../images/bars.jpg");
         background-position: 50% 65%; 
         text-align: center;
         color: #eee;
     }
-
-    .glyphicon2 {
+.container {
+    padding-left: 0px;
+    
+}
+  
+.glyphicon2 {
         font-size: 50px;
         position: relative;
         top: 20px;
         right:10px;
     }
 
-    .navbar {
-        margin-bottom: 10px;
+.navbar {
+        margin-bottom: 30px;
         border-radius: 0;
     }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 
-    .row.content {
+.row.content {
         height: 450px
     }
     /* Set gray background color and 100% height */
 
-    .sidenav {
+.sidenav {
         padding-top: 20px;
         height: 100%;
     }
     /* Set black background color, white text and some padding */
 
-    footer {
+footer {
         background-color: #555;
         color: white;
         padding: 15px;
