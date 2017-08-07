@@ -77,11 +77,18 @@ th {
         height: 100%;
     }
     /* Set black background color, white text and some padding */
+#about {
+   padding-bottom: 20px;
 
+}
+#about-text {
+    padding: 25px;
+}
 footer {
         background-color: #555;
         color: white;
-        padding: 15px;
+        padding: 25px 0px 15px 0px;
+        margin-bottom: 0px;
         position: relative;
         clear: all;
     }
